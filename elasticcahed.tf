@@ -15,10 +15,9 @@ resource "aws_elasticache_replication_group" "rep_group" {
   subnet_group_name             = aws_elasticache_subnet_group.elasticache_subnet.name
 
   lifecycle {
-    ignore_changes = [number_cache_clusters]
+    ignore_changes = [cluster_mode]
   }
 }
-
 
 
 resource "aws_elasticache_cluster" "replica" {
