@@ -1,9 +1,9 @@
-data "template_file" "user_data_template" {  
+/* data "template_file" "user_data_template" {  
   template = file("user_data.sh")  
   vars = {  
     ecs_cluster_name = aws_ecs_cluster.production.name  
   }  
-}  
+}   */
 
 resource "aws_launch_template" "aws_template" {
   name_prefix   = "launch-template-"
@@ -17,7 +17,7 @@ resource "aws_launch_template" "aws_template" {
     name = aws_iam_instance_profile.ecs.name
   }
 
-  user_data = data.template_file.user_data_template.rendered
+  #user_data = data.template_file.user_data_template.rendered
 
   network_interfaces {
     associate_public_ip_address = true
