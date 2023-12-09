@@ -10,6 +10,7 @@ resource "aws_elasticache_subnet_group" "elasticache_subnet" {
 resource "aws_elasticache_replication_group" "rep_group" {
   automatic_failover_enabled    = true
   replication_group_id          = "fake-video-studio-rep-group"
+  description                 = "example description"
   node_type                     = "cache.t3.micro"
   port                          = 6379
   subnet_group_name             = aws_elasticache_subnet_group.elasticache_subnet.name
