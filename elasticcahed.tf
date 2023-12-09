@@ -1,4 +1,4 @@
-/*
+/* /*
  * Code to add ElastiCache subnet group, replication group, and cluster
 */
 
@@ -28,3 +28,4 @@ resource "aws_elasticache_cluster" "replica" {
   replication_group_id = aws_elasticache_replication_group.rep_group.id
   
 }
+ */
