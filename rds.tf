@@ -9,7 +9,7 @@ resource "aws_db_instance" "production" {
   instance_class            = "db.t3.micro"  
   maintenance_window        = "sun:08:00-sun:09:00"  
   #name                      = "fake_video_studio_db"  not valid attribute in tf
-  parameter_group_name      = "default.postgres13"  
+  parameter_group_name      = "default.postgres15"  
   password                  = "test12345"  
   username                  = "postgres"  
   allocated_storage         = "10"  
