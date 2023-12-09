@@ -1,6 +1,6 @@
-/* /*
+/* 
  * Code to add ElastiCache subnet group, replication group, and cluster
-*/
+
 
 resource "aws_elasticache_subnet_group" "elasticache_subnet" {
   name       = "fake-video-studio-cache-subnet"
