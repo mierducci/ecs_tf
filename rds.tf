@@ -2,7 +2,7 @@ resource "aws_db_instance" "production" {
   backup_window             = "03:00-04:00"  
   ca_cert_identifier        = "rds-ca-2019"  
   db_subnet_group_name      = aws_db_subnet_group.db_subnet_group.name  
-  engine_version            = "13.4"  
+  engine_version            = "15.4"  
   engine                    = "postgres"  
   skip_final_snapshot       = true  
   identifier                = "production"  
