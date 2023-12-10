@@ -4,6 +4,6 @@ terraform {
     key            = "backend.tfstate"  
     region         = "us-east-1"  
     encrypt        = false  
-    dynamodb_table = "revdynnamodb"  
+    dynamodb_table = "revdynamodb"  
   }  
 }
