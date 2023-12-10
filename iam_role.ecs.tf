@@ -2,7 +2,7 @@
  * Create ECS IAM Instance Roles, Policies, and Profile
  */
 
-/* resource "aws_iam_role" "ecs-role" {
+ resource "aws_iam_role" "ecs-role" {
   name               = "ecs_host_role"
   assume_role_policy = file("policies/ecs-role.json")
 }
@@ -28,4 +28,4 @@ resource "aws_iam_instance_profile" "ecs" {
   name = "ecs_instance_profile"
   path = "/"
   role = aws_iam_role.ecs-role.name
-} */
+} 
