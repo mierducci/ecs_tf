@@ -1,9 +1,3 @@
-resource "aws_ecs_cluster" "production" {  
-  name = "production"  
-  lifecycle {  
-    create_before_destroy = true  
-  }  
-  tags = {  
-    Env  = "production"  
-  }  
+resource "aws_ecs_cluster" "production" {
+  name = "production"
 }
