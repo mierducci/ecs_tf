@@ -1,7 +1,7 @@
 data "template_file" "app" {
   template = file("container_definitions.json")
   vars = {
-    region         = "us-east-1",
+    region         = "us-east-1"
     ecr_repository = "058382484161.dkr.ecr.us-east-1.amazonaws.com/myecrrpo" # Update with your ECR repository name
   }
 }
