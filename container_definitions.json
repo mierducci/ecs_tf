@@ -4,7 +4,7 @@
     "command": ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "80"],
     "cpu": 10,
     "memory": 512,
-    "image": "${var.ecr_repository}",
+    "image": "058382484161.dkr.ecr.us-east-1.amazonaws.com/myecrrpo:latest",
     "essential": true,
     "links": [],
     "portMappings": [
