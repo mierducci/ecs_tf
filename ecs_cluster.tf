@@ -4,7 +4,6 @@ resource "aws_ecs_cluster" "production" {
     create_before_destroy = true  
   }  
   tags = {  
-    Name = "production"  
     Env  = "production"  
   }  
 }
