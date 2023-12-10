@@ -19,7 +19,7 @@
       "logDriver": "awslogs",
       "options": {
         "awslogs-group": "/ecs/fake-video-studio",
-        "awslogs-region": "${var.region}",
+        "awslogs-region": "us-east-1",
         "awslogs-stream-prefix": "fake-video-studio-log-stream"
       }
     }
