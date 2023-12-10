@@ -12,8 +12,8 @@ resource "aws_ecs_service" "service" {
     security_groups  = [aws_security_group.ecs.id] # Replace with your actual security group ID
   }
 
-  depends_on = [
+/*   depends_on = [
     aws_iam_role_policy.ecs-service-role-policy,
     aws_ecs_task_definition.td,
-  ]
+  ] */
 }
