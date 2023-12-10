@@ -1,16 +1,15 @@
 resource "aws_ecs_service" "service" {
-  name               = "fake-video-studio"
-  cluster            = aws_ecs_cluster.production.id
-  desired_count      = length(var.aws_zones)
+  name                 = "fake-video-studio"
+  cluster              = aws_ecs_cluster.production.id
+  desired_count        = length(var.aws_zones)
   force_new_deployment = true
-  iam_role           = aws_iam_role.ecs-service-role.arn
-  task_definition    = aws_ecs_task_definition.td.arn
+  task_definition      = aws_ecs_task_definition.td.arn
 
   launch_type = "EC2" # Specify the launch type
 
   network_configuration {
-    subnets = [aws_subnet.private_subnet.*.id] # Replace with your actual subnet IDs
-    security_groups = [aws_security_group.ecs.id] # Replace with your actual security group ID
+    subnets          = [aws_subnet.private_subnet.*.id] # Replace with your actual subnet IDs
+    security_groups  = [aws_security_group.ecs.id] # Replace with your actual security group ID
   }
 
   depends_on = [
