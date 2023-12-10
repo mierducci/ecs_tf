@@ -8,7 +8,7 @@ data "template_file" "app" {
 
 resource "aws_ecs_task_definition" "td" {
   family                   = "fake-video-studio"
-  container_definitions    = file("container_definitions.json") # Update the path if needed
+  container_definitions    = data.template_file.app.rendered # Use the rendered template here
   requires_compatibilities = ["EC2"]
   network_mode             = "bridge"
 }
